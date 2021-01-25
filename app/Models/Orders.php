@@ -15,4 +15,14 @@ class Orders extends Model
     protected $fillable = [
         'total','codeorder','status_orders','status_payment','snap_token'
     ];
+
+    public function order_details()
+    {
+      return $this->hasMany('App\Models\OrderDetails', 'idorders');
+    }
+
+    public function users()
+    {
+      return $this->belongsTo('App\Models\User', 'idusers');
+    }
 }

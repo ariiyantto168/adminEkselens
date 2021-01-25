@@ -25,6 +25,13 @@ class CreateUsersTable extends Migration
             $table->dateTime('last_login')->nullable();
             $table->timestamps();
             $table->softDeletes();
+            $table->string('firstname')->nullable();
+            $table->string('lastname')->nullable();
+            $table->string('mobile')->nullable();
+            $table->string('tempatlahir')->nullable();
+            $table->date('date_born')->nullable();
+            $table->string('jobrole')->nullable();
+            $table->text('address')->nullable();
             $table->string('created_by')->nullable();
             $table->string('updated_by')->nullable();
             $table->string('deleted_by')->nullable();

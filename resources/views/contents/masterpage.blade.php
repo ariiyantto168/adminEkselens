@@ -161,27 +161,15 @@
             </a>
             <ul class="nav nav-treeview" style="display: block;">
               <li class="nav-item">
-                <a href="{{ url('orderclass/paymentreport') }}" class="nav-link" id="submenu_discounts" style="color:#F5F5F5;">
+                <a href="{{ url('orders/report') }}" class="nav-link" id="submenu_discounts" style="color:#F5F5F5;">
                   <i class="fas fa-file-invoice-dollar nav-icon"></i>
                   <p>Payment Report</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ url('orderclass/discounts') }}" class="nav-link" id="submenu_discounts" style="color:#F5F5F5;">
+                <a href="{{ url('orders/status') }}" class="nav-link" id="submenu_discounts" style="color:#F5F5F5;">
                   <i class="fas fa-money-check-alt nav-icon"></i>
                   <p>Report Status Order</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ url('orderclass/verified') }}" class="nav-link" id="submenu_kupons" style="color:#F5F5F5;">
-                  <i class="fas fa-check-circle nav-icon"></i>
-                  <p>Verifivied Order</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ url('orderclass/rejected') }}" class="nav-link" id="submenu_kupons" style="color:#F5F5F5;">
-                  <i class="fas fa-times-circle nav-icon"></i>
-                  <p>Rejected Order</p>
                 </a>
               </li>
             </ul>
@@ -223,6 +211,23 @@
                 <a href="{{ url('lecture/whislists') }}" class="nav-link" id="submenu_whislists" style="color:#F5F5F5;">
                   <i class="fas fa-heart nav-icon"></i>
                   <p>Whislists Users</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview menu-open" >
+            <a href="#" class="nav-link" id="menu_quiz" style="color:#F5F5F5;">
+              <i class="nav-icon fas fa-user-graduate"></i>
+              <p>
+                Quiz
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview" style="display: block;">
+              <li class="nav-item">
+                <a href="{{ url('quiz/quizclass') }}" class="nav-link" id="submenu_quizclass" style="color:#F5F5F5;">
+                  <i class="fas fa-chalkboard-teacher nav-icon"></i>
+                  <p>Quiz Class</p>
                 </a>
               </li>
             </ul>

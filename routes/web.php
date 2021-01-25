@@ -15,6 +15,8 @@ use App\Http\Controllers\CareersControlller;
 use App\Http\Controllers\NewclasesController;
 use App\Http\Controllers\TestimoniesController;
 use App\Http\Controllers\WhislistsController;
+use App\Http\Controllers\OrdersController;
+use App\Http\Controllers\QuizclassController;
 
 // ====================================================//
 
@@ -130,3 +132,14 @@ Route::get('promotions/kupons/create-new', [KuponsController::class, 'create_pag
 Route::post('promotions/kupons/create-new', [KuponsController::class, 'create_save'])->middleware('check.auth');
 Route::get('promotions/kupons/update/{kupons}', [KuponsController::class, 'update_page'])->middleware('check.auth');
 Route::post('promotions/kupons/update/{kupons}', [KuponsController::class, 'update_save'])->middleware('check.auth');
+
+// orders
+Route::get('orders/status', [OrdersController::class, 'index'])->middleware('check.auth');
+Route::get('orders/report', [OrdersController::class, 'report'])->middleware('check.auth');
+
+// Quiz
+Route::get('quiz/quizclass', [QuizclassController::class, 'index'])->middleware('check.auth');
+Route::get('quiz/quizclass/create-new', [QuizclassController::class, 'create_page'])->middleware('check.auth');
+Route::post('quiz/quizclass/create-new', [QuizclassController::class, 'create_save_classquiz'])->middleware('check.auth');
+Route::get('quiz/quizclass/detail/{classquiz}', [QuizclassController::class, 'quizclass_detail'])->middleware('check.auth');
+Route::get('quiz/quizclass/viewquizclass/{classquiz}', [QuizclassController::class, 'viewquizclass'])->middleware('check.auth');
